@@ -1,4 +1,4 @@
-const todos = [
+let todos = [
     {
         id: 1,
         task: "Learn API"
