@@ -1,7 +1,9 @@
+require("dotenv").config()
 const express = require("express")
 const app = express()
 const bodyParser = require("body-parser")
 const todos = require("./todos")
+const PORT = process.env.PORT
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -105,6 +107,6 @@ app.get("/", (req, res) => {
 })
 
 
-app.listen(3001, () => {
+app.listen(PORT, () => {
     console.log("My API listen is listen");
 })
